@@ -1,1 +1,156 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Pablo Sanderson</title>
+    <meta name="description" content="Software Engineer at Specter">
+    <meta name="author" content="Pablo Sanderson">
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/dot.png">
+
+    <!-- jsQuery
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#moon").click(function () {
+                $("body").addClass("day");
+                $("body").removeClass("night");
+            });
+            $("#sun").click(function () {
+                $("body").removeClass("day");
+                $("body").addClass("night");
+            });
+        });
+
+    </script>
+
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 01, 2021 09:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = now - countDownDate;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="counter"
+            document.getElementById("counter").innerHTML = days + " days, " + hours + " hour" + (hours === 1 ? "" : "s") + ", " + minutes + " minute" + (minutes === 1 ? "" : "s") + ", and " + seconds + " second" + (seconds === 1 ? "" : "s");
+
+            // If the count down errors, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("counter").innerHTML = "year";
+            }
+        }, 1000);
+    </script>
+
+    <!-- Google Analytics
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-REWGEEDN95"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-REWGEEDN95');
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <body class="day">
+        <div class="container animated fadeIn one">
+            <div class="row group">
+                <div class="three columns icon">
+                    <img src="images/moon.svg" id="moon">
+                    <img src="images/sun.svg" id="sun">
+                </div>
+
+                <div class="six columns offset-by-three">
+                    <h1 class="night">Hi, I'm Pablo.</h1>
+
+                    <div class="animated fadeIn two">
+                        <p>I build software. I’ve been helping at <a href="https://tryspecter.com/" target="_blank"
+                                class="underline">Specter</a> for the last <span id="counter"><br></span>.</p>
+
+                        <p>I live in London by way of Frankfurt by way of Gran Canaria. Keep up with me on <a
+                                href="https://twitter.com/psiesta11" target="_blank" class="underline">Twitter</a>.</p>
+
+
+                        <div class="spacer48"></div>
+
+                    </div>
+
+                    <h4 class="animated fadeIn three">PREVIOUSLY</h4>
+
+                </div>
+
+            </div>
+
+            <div class="row group">
+                <div class="three columns offset-by-six animated fadeIn three">
+                    <h2 class="night"><a href="https://eigentech.com/" target="_blank" class="underline">Eigen</a></h2>
+                </div>
+                <div class="three columns animated fadeIn three">
+                    <h3>Software Engineer</h3>
+                    <h4>2019–2021</h4>
+                </div>
+            </div>
+
+            <div class="row group">
+                <div class="three columns offset-by-six animated fadeIn three">
+                    <h2 class="night"><a href="https://www.instagram.com/foodtobento/" target="_blank"
+                            class="underline">Food to Bento </a></h2>
+                </div>
+                <div class="three columns animated fadeIn three">
+                    <h3>Founder</h3>
+                    <h4>2018–2019</h4>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </body>
+
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
