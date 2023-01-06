@@ -3,44 +3,30 @@
 
 <head>
 
-    <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
     <meta charset="utf-8">
     <title>Pablo Sanderson</title>
     <meta name="description" content="Software Engineer at Specter">
     <meta name="author" content="Pablo Sanderson">
 
-    <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" type="image/png" href="images/dot.png">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animate.css">
-
-    <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/dot.png">
-
-    <!-- jsQuery
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#moon").click(function () {
-                $("body").addClass("day");
-                $("body").removeClass("night");
+            $("#night").click(function () {
+                $("body").addClass("light");
+                $("body").removeClass("dark");
             });
-            $("#sun").click(function () {
-                $("body").removeClass("day");
-                $("body").addClass("night");
+            $("#day").click(function () {
+                $("body").removeClass("light");
+                $("body").addClass("dark");
             });
         });
-
     </script>
 
 
@@ -94,16 +80,15 @@
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <body class="day">
+    <body class="dark">
         <div class="container animated fadeIn one">
             <div class="row group">
                 <div class="three columns icon">
                     <img src="images/moon.svg" id="moon">
                     <img src="images/sun.svg" id="sun">
                 </div>
-
                 <div class="six columns offset-by-three">
-                    <h1 class="night">Hi, I'm Pablo.</h1>
+                    <h1 class="dark">Hi, I'm Pablo.</h1>
 
                     <div class="animated fadeIn two">
                         <p>I build software. I’ve been helping at <a href="https://tryspecter.com/" target="_blank"
@@ -125,7 +110,7 @@
 
             <div class="row group">
                 <div class="three columns offset-by-six animated fadeIn three">
-                    <h2 class="night"><a href="https://eigentech.com/" target="_blank" class="underline">Eigen</a></h2>
+                    <h2 class="dark"><a href="https://eigentech.com/" target="_blank" class="underline">Eigen</a></h2>
                 </div>
                 <div class="three columns animated fadeIn three">
                     <h3>Software Engineer</h3>
@@ -135,7 +120,7 @@
 
             <div class="row group">
                 <div class="three columns offset-by-six animated fadeIn three">
-                    <h2 class="night"><a href="https://www.instagram.com/foodtobento/" target="_blank"
+                    <h2 class="dark"><a href="https://www.instagram.com/foodtobento/" target="_blank"
                             class="underline">Food to Bento </a></h2>
                 </div>
                 <div class="three columns animated fadeIn three">
