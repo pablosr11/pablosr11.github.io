@@ -26,6 +26,11 @@ body.light #day {
     width: 100%;
 }
 
+.spacer24 {
+    height: 24px;
+    width: 100%;
+}
+
 * {
     -webkit-font-smoothing: antialiased;
     margin: 0;
